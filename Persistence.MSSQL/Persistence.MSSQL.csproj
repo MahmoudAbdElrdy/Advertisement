@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputPath>..\Web\bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;Sql2008</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200925155057_Intial.cs" />
+    <Compile Remove="Migrations\20200925155057_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925155218_Intial.cs" />
+    <Compile Remove="Migrations\20200925155218_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925172717_Intial.cs" />
+    <Compile Remove="Migrations\20200925172717_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20201025193225_Brands.cs" />
+    <Compile Remove="Migrations\20201025193225_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025193635_Brands.cs" />
+    <Compile Remove="Migrations\20201025193635_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025193851_Brands.cs" />
+    <Compile Remove="Migrations\20201025193851_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025194141_Brands.cs" />
+    <Compile Remove="Migrations\20201025194141_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025194556_Brands.cs" />
+    <Compile Remove="Migrations\20201025194556_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025194818_Brands.cs" />
+    <Compile Remove="Migrations\20201025194818_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025195048_Brands.cs" />
+    <Compile Remove="Migrations\20201025195048_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025195223_Brands.cs" />
+    <Compile Remove="Migrations\20201025195223_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025195529_Brands.cs" />
+    <Compile Remove="Migrations\20201025195529_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025195846_Brands.cs" />
+    <Compile Remove="Migrations\20201025195846_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025200519_Brands.cs" />
+    <Compile Remove="Migrations\20201025200519_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025200622_Brands.cs" />
+    <Compile Remove="Migrations\20201025200622_Brands.Designer.cs" />
+    <Compile Remove="Migrations\20201025204755_BrandAudit.cs" />
+    <Compile Remove="Migrations\20201025204755_BrandAudit.Designer.cs" />
+    <Compile Remove="Migrations\20201026110740_Permissions.cs" />
+    <Compile Remove="Migrations\20201026110740_Permissions.Designer.cs" />
+    <Compile Remove="Migrations\20201209133027_ImageTable.cs" />
+    <Compile Remove="Migrations\20201209133027_ImageTable.Designer.cs" />
+    <Compile Remove="Migrations\20201224235154_ModifyUserTable.cs" />
+    <Compile Remove="Migrations\20201224235154_ModifyUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20201225160053_UserAvatar.cs" />
+    <Compile Remove="Migrations\20201225160053_UserAvatar.Designer.cs" />
+    <Compile Remove="Migrations\20201226170958_RenameImageTbl.cs" />
+    <Compile Remove="Migrations\20201226170958_RenameImageTbl.Designer.cs" />
+    <Compile Remove="Migrations\20210110121311_addBrandImage.cs" />
+    <Compile Remove="Migrations\20210110121311_addBrandImage.Designer.cs" />
+    <Compile Remove="Migrations\20210110122824_addBrandImage.cs" />
+    <Compile Remove="Migrations\20210110122824_addBrandImage.Designer.cs" />
+    <Compile Remove="Migrations\20210112103925_addBrandID.cs" />
+    <Compile Remove="Migrations\20210112103925_addBrandID.Designer.cs" />
+    <Compile Remove="Migrations\20210114101516_cascadeBrandImage.cs" />
+    <Compile Remove="Migrations\20210114101516_cascadeBrandImage.Designer.cs" />
+    <Compile Remove="Migrations\20210117083150_questionTable.cs" />
+    <Compile Remove="Migrations\20210117083150_questionTable.Designer.cs" />
+    <Compile Remove="Migrations\20210117120035_questionTable.cs" />
+    <Compile Remove="Migrations\20210117120035_questionTable.Designer.cs" />
+    <Compile Remove="Migrations\20210117120859_questionTable.cs" />
+    <Compile Remove="Migrations\20210117120859_questionTable.Designer.cs" />
+    <Compile Remove="Migrations\20210117130831_ModifyOutletsAndBrandsTableKeys.cs" />
+    <Compile Remove="Migrations\20210117130831_ModifyOutletsAndBrandsTableKeys.Designer.cs" />
+    <Compile Remove="Migrations\20210118231406_addcityndcounry.cs" />
+    <Compile Remove="Migrations\20210118231406_addcityndcounry.Designer.cs" />
+    <Compile Remove="Migrations\20210119002508_addcityrelatinwithcounty.cs" />
+    <Compile Remove="Migrations\20210119002508_addcityrelatinwithcounty.Designer.cs" />
+    <Compile Remove="Migrations\20210119161258_chngeidtostring.cs" />
+    <Compile Remove="Migrations\20210119161258_chngeidtostring.Designer.cs" />
+    <Compile Remove="Migrations\20210119163228_addtablecityandcountry.cs" />
+    <Compile Remove="Migrations\20210119163228_addtablecityandcountry.Designer.cs" />
+    <Compile Remove="Migrations\20210120215041_Spaces.cs" />
+    <Compile Remove="Migrations\20210120215041_Spaces.Designer.cs" />
+    <Compile Remove="Migrations\20210120215614_Spaces.cs" />
+    <Compile Remove="Migrations\20210120215614_Spaces.Designer.cs" />
+    <Compile Remove="Migrations\20210120215914_SpacesWithRegion.cs" />
+    <Compile Remove="Migrations\20210120215914_SpacesWithRegion.Designer.cs" />
+    <Compile Remove="Migrations\20210120221647_SpacesWithRegion.cs" />
+    <Compile Remove="Migrations\20210120221647_SpacesWithRegion.Designer.cs" />
+    <Compile Remove="Migrations\20210125182525_addadvertiserelatedtables.cs" />
+    <Compile Remove="Migrations\20210125182525_addadvertiserelatedtables.Designer.cs" />
+    <Compile Remove="Migrations\20210126004330_addstatustoadstatus.cs" />
+    <Compile Remove="Migrations\20210126004330_addstatustoadstatus.Designer.cs" />
+    <Compile Remove="Migrations\20210127013539_asasdsff.cs" />
+    <Compile Remove="Migrations\20210127013539_asasdsff.Designer.cs" />
+    <Compile Remove="Migrations\20210127031008_makeseriousamountnulable.cs" />
+    <Compile Remove="Migrations\20210127031008_makeseriousamountnulable.Designer.cs" />
+    <Compile Remove="Migrations\20210130160846_addservicetable.cs" />
+    <Compile Remove="Migrations\20210130160846_addservicetable.Designer.cs" />
+    <Compile Remove="Migrations\20210131005734_addservicetables.cs" />
+    <Compile Remove="Migrations\20210131005734_addservicetables.Designer.cs" />
+    <Compile Remove="Migrations\20210202094006_UserCode.cs" />
+    <Compile Remove="Migrations\20210202094006_UserCode.Designer.cs" />
+    <Compile Remove="Migrations\20210202095256_Transactions.cs" />
+    <Compile Remove="Migrations\20210202095256_Transactions.Designer.cs" />
+    <Compile Remove="Migrations\20210203023642_addrelationbetweenadandstatus.cs" />
+    <Compile Remove="Migrations\20210203023642_addrelationbetweenadandstatus.Designer.cs" />
+    <Compile Remove="Migrations\20210205112551_FixMigration.cs" />
+    <Compile Remove="Migrations\20210205112551_FixMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210205113015_FixMigration.cs" />
+    <Compile Remove="Migrations\20210205113015_FixMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210205114137_FixMigration.cs" />
+    <Compile Remove="Migrations\20210205114137_FixMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210422050559_addenanden.cs" />
+    <Compile Remove="Migrations\20210422050559_addenanden.Designer.cs" />
+    <Compile Remove="Migrations\20210422050834_addenandenff.cs" />
+    <Compile Remove="Migrations\20210422050834_addenandenff.Designer.cs" />
+    <Compile Remove="Migrations\20210423233612_addgeneralcomfigrationprimarykey.cs" />
+    <Compile Remove="Migrations\20210423233612_addgeneralcomfigrationprimarykey.Designer.cs" />
+    <Compile Remove="Migrations\20210423234604_addgeneralcomfigration.cs" />
+    <Compile Remove="Migrations\20210423234604_addgeneralcomfigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,54 @@
+<div mat-dialog-title>
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="dialog-title"> إضافة مدينة</h3>
+    <button mat-button mat-dialog-close><span class="material-icons"> clear </span></button>
+  </div>
+</div>
+<div mat-dialog-content>
+  <form (ngSubmit)="doSubmit()" [formGroup]="adComplaintForm" class="w-100">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> اصم صاحب الاعلان</mat-label>
+          <input placeholder=" اسم صاحب الاعلان" readonly matInput name="adOwnerName" formControlName="adOwnerName" />
+        </mat-form-field>
+      </div>
+      <div class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> اصم صاحب البلاغ</mat-label>
+          <input placeholder=" اسم صاحب البلاغ" readonly matInput name="clientName" formControlName="clientName" />
+        </mat-form-field>
+      </div>
+      <div class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> تفاصيل البلاغ</mat-label>
+          <input placeholder=" تفاصيل البلاغ" matInput readonly name="complaintReason" formControlName="complaintReason" />
+        </mat-form-field>
+      </div>
+      <div class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> الرد علي البلاغ</mat-label>
+          <input placeholder="الرد علي البلاغ"  matInput name="complaintReasonReplay"
+            formControlName="complaintReasonReplay" />
+
+
+          <mat-error *ngIf="adComplaintForm.get('complaintReasonReplay').errors?.required" class="mat-error">هذا الحقل
+            مطلوب</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-checkbox matInput formControlName="isComplaintSeen" id="isComplaintSeen">
+          روية البلاغ
+        </mat-checkbox>
+      </div>
+    </div>
+    <hr />
+    <div class="text-center form-actions">
+      <button mat-raised-button color="primary">تعديل</button>
+      <button mat-raised-button mat-dialog-close>إلغاء</button>
+    </div>
+  </form>
+</div>
+<!-- <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div> -->

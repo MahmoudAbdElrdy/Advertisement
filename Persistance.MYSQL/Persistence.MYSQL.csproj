@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Persistence.MYSQL</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200925170049_Intial.cs" />
+    <Compile Remove="Migrations\20200925170049_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925175205_Intial.cs" />
+    <Compile Remove="Migrations\20200925175205_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925175307_Intial.cs" />
+    <Compile Remove="Migrations\20200925175307_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925175525_Intial.cs" />
+    <Compile Remove="Migrations\20200925175525_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925175750_Intial.cs" />
+    <Compile Remove="Migrations\20200925175750_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925175902_Intial.cs" />
+    <Compile Remove="Migrations\20200925175902_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925180010_Intial.cs" />
+    <Compile Remove="Migrations\20200925180010_Intial.Designer.cs" />
+    <Compile Remove="Migrations\20200925182753_Intial.cs" />
+    <Compile Remove="Migrations\20200925182753_Intial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.7" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.21" />
+    
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

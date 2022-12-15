@@ -1,0 +1,112 @@
+<div *ngIf="loaded == false">
+    <h2>loading ...</h2>
+</div>
+<div *ngIf="loaded == true">
+    <div mat-dialog-title>
+        <div class="d-flex justify-content-between align-items-center">
+          <h3 class="dialog-title"> إضافة </h3>
+          <button mat-button  mat-dialog-close><span class="material-icons"> clear </span></button>
+        </div>
+      </div>
+    <div mat-dialog-content>
+    
+     
+                            <!--begin::Form-->
+                            <form [formGroup]="signupForm" (ngSubmit)="signUp()" >
+                                <mat-tab-group>
+                                    <mat-tab label="بيانات المستخدم">
+    
+                                        <div *ngIf="show" class="form-group">
+                                            <label> اسم المستخدم</label>
+                                            <input  ng-model="userName" formControlName="userName"
+                                                class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                type="text"  name="userName" autocomplete="off" />
+                                            <div *ngIf="signupForm.controls.userName.invalid&&signupForm.controls.userName.touched"
+                                                class="alert alert-danger mt-2"> name not valid</div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label> اسم الاول</label>
+                                            <input  ng-model="firstName" formControlName="firstName"
+                                                class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                type="text" name="firstName" autocomplete="off" />
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label> اسم الاخير</label>
+                                            <input  ng-model="lastName" formControlName="lastName"
+                                                class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                type="text"  name="lastName" autocomplete="off" />
+                                            
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label> الميل</label>
+                                            <input ng-model="email" formControlName="email"
+                                                class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                type="email"  name="email" autocomplete="off" />
+                                            <div *ngIf="signupForm.controls.email.invalid&&signupForm.controls.email.touched"
+                                                class="alert alert-danger mt-2">email not valid</div>
+                                        </div>
+                                       
+                                            <div  *ngIf="show" class="form-group" >
+                                                <label> الباسورد</label>
+                                                <input ng-model="password" formControlName="password"
+                                                    class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                    type="password"  name="password" autocomplete="off" />
+                                                <div *ngIf="signupForm.controls.password.invalid&&signupForm.controls.password.touched"
+                                                    class="alert alert-danger mt-2">password not valid</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> الموبايل</label>
+                                                <input  ng-model="phoneNumber" formControlName="phoneNumber"
+                                                    class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
+                                                    type="text" placeholder="phoneNumber" name="phoneNumber" autocomplete="off" />
+                                                
+                                            </div>
+                                    </mat-tab>
+                                    <mat-tab label="صلاحيات">
+                                        <div class="form-group">
+                                            <label> صلاحيات</label>
+                                                <!-- <mat-form-field appearance="fill">
+                                                
+                                                    <mat-select formControlName="roles" multiple>
+                                                      <mat-option *ngFor="let item of identityrole" [value]="item.name">{{item.name}}</mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field> -->
+                                                  
+                                                  <div class="form-group">
+                                                    <label formArrayName="roles" *ngFor="let perm of permissionsArr.controls; index as i">
+                                                       
+                                                        <br> <input type="checkbox" [formControlName]="i">
+                                                      
+                                                        {{identityrole[i].name}}
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        
+                                                      </label>
+                                                    
+                                                </div>
+                                        </div>
+                                    </mat-tab>
+                                </mat-tab-group>
+                              
+                                 
+                                    <!-- <div class="form-group">
+                                        <label for="roles">Roles</label>
+                                        <select ng-model="roles" formControlName="roles" class="form-control" id="Role">
+                                            <option *ngFor="let item of identityrole" [value]="item.name">{{item.name}}</option>
+    
+                                        </select>
+                                    </div>
+                                   -->
+                                   <div class="text-center form-actions">
+                                        <button mat-raised-button  color="primary">إضافة</button>
+                                        <button mat-raised-button mat-dialog-close>إلغاء</button>
+                                    </div>
+                                    <!--end::Form group-->
+                            </form>
+                            <!--end::Form-->
+                       
+    </div>
+ </div>
+

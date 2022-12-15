@@ -1,0 +1,115 @@
+<div class="container tmp-vert-space">
+    <div class="row mb-4">
+        <div class="col-12">
+            <mat-card class="tender-details">
+                <mat-card-header class="page-title text-start">
+                   
+                    <mat-card-title>العنوان:{{AdvertisementDetailDto.title}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="text-start">
+                    <div class="table-responsive-sm">                        
+                        <table class="table table-borderless table-striped">
+                            <tbody>
+
+
+                                <tr>
+                                    <th>اسم البائع</th>
+                                    <td>{{AdvertisementDetailDto.vendorName}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>نوع الاعلان</th>
+                                    <td>{{AdvertisementDetailDto.adType }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>الوصف</th>
+                                    <td>{{AdvertisementDetailDto.description }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>العنوان</th>
+                                    <td>{{AdvertisementDetailDto.address }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>المدنية</th>
+                                    <td>{{AdvertisementDetailDto.cityName?.ar}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>الطويل</th>
+                                    <td>{{AdvertisementDetailDto.lng}}</td>
+                                </tr>
+
+                                 
+                                
+                                <tr>
+                                    <th>العرض</th>
+                                    <td>{{AdvertisementDetailDto.lat }}</td>
+                                </tr>
+
+                                
+                                <!-- <tr *ngFor="let item of publicauctionAttachmentsss">
+                                    <th>{{'Attachments' | translate}}</th>
+
+                                    <td>  
+
+                                    <button type="button" class="btn btn-primary" (click)="GoToDownLoad(item.imageUrl)"><span class="material-icons valign-middle">get_app</span> {{'Download' | translate}}</button> 
+                                      </td>
+                    
+                                    </tr>
+                                 -->
+                            </tbody>
+                        </table>                  
+                      </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <h2>الاعلانات</h2>
+    <!-- <table mat-table [dataSource]="AdDto" matSort class="w-100">
+      
+        <ng-container hidden matColumnDef="id">
+          <th hidden mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+          <td hidden mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+    
+       
+        <ng-container matColumnDef="adType">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>نوع الاعلان </th>
+            <td mat-cell *matCellDef="let row"> {{row.adType}} </td>
+          </ng-container>
+         
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>  السعر </th>
+            <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+          </ng-container>
+          <ng-container matColumnDef="fromDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>  تاريخ البداية </th>
+            <td mat-cell *matCellDef="let row"> {{row.fromDate|CustomDatePipe}} </td>
+          </ng-container>
+          <ng-container matColumnDef="toDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>  تاريخ النهاية </th>
+            <td mat-cell *matCellDef="let row"> {{row.toDate|CustomDatePipe}} </td>
+          </ng-container>
+        
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> -->
+      <!-- <h3>صور الاعلان </h3>
+      <div class="file-preview col-10">
+        <ul>
+            <li style="border: none;"
+                *ngFor="let itemImage of AdvertisementDetailDto?.images">
+                <div class="item">
+                    <a [href]="baseUrlImage+itemImage+'?w=500&h=1000'" target="_blank" [download]>
+                        <img [src]="baseUrlImage+itemImage+'?w=300&h=100'" alt="" style="border-radius: 10px;"></a>
+                     
+
+                </div>
+            </li>
+        </ul>
+    </div> -->
+</div>

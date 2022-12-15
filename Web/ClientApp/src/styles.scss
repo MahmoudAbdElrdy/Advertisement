@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './scss/material';
+@import './scss/utils';
+@import './scss/responsive';
+@import './scss/variables';
+@import './scss/theme';
+
+@font-face {
+    font-family: 'Almarai-Regular';
+    src: url('assets/fonts/Almarai/Almarai-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Almarai-Bold';
+    src: url('assets/fonts/Almarai/Almarai-Bold.ttf');
+}
+/* ------------------------------------------------------------------------------ */
+
+:root,
+html {
+    font-size: 14px !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Almarai-Regular' !important;
+    direction: rtl;
+    text-align: right;
+}
+.mat-list-base .mat-list-item .mat-list-item-content, 
+.mat-list-base .mat-list-option .mat-list-item-content,
+.mat-card,
+.mat-tab-group,
+.mat-tab-header,
+.mat-tab-label-container,
+.mat-tab-labels,
+.mat-tab-label,
+.mat-table,
+.mat-table td,
+.mat-table th,
+.mat-error,
+.dialog-title,
+.mat-form-field,
+.mat-form-field-label-wrapper,
+.mat-checkbox-layout .mat-checkbox-label,
+.mat-button, .mat-raised-button,
+.mat-tooltip,
+.mat-paginator, .mat-paginator-page-size .mat-select-trigger {
+    font-family: 'Almarai-Regular' !important;
+}
+.material-icons {
+    direction: rtl;
+    vertical-align: middle;
+}
+.mat-form-field, .mat-form-field-label-wrapper {
+    text-align: right !important;
+}
+.mat-checkbox-inner-container {
+    margin-right: 0px !important;
+    margin-left: 8px !important;
+}
+button.mat-menu-item {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Almarai-Regular';
+}
+.mat-menu-item .mat-icon {
+    margin-right: 0 !important;
+    margin-left: 16px !important;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: inherit !important;
+    padding-right: 24px !important;
+}
+th.mat-header-cell {
+    text-align: inherit !important;
+}
+.mat-dialog-container{
+    direction: rtl;
+    font-family: 'Almarai-Regular';    
+}
+.mat-dialog-actions .mat-button-base+.mat-button-base, .mat-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base {
+    margin-left: 0;
+    margin-right: 12px;
+}
+.form-actions .mat-button-base{
+    margin: 4px 8px;
+}
+.mat-form-field-appearance-fill .mat-form-field-subscript-wrapper {
+    padding: 2px 0.5em !important;
+}
+.mat-form-field-label {
+    padding-bottom: 4px !important;
+}
+.mat-paginator-navigation-next, .mat-paginator-navigation-previous{
+    transform: rotate(180deg);
+}

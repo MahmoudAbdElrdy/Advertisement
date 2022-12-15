@@ -1,0 +1,33 @@
+<div class="login-page">
+  <div class="content px20">  <form class="login-form" [formGroup]="signinForm" (ngSubmit)="signIn()" id="kt_login_signin_form">
+ 
+      <div class="text-center">
+        <h2 class="app-name">تسجيل الدخول</h2>
+      </div>
+      <div fxLayout="row">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="البريد الإلكتروني"  name="username"
+            formControlName="username" /> 
+            <mat-error *ngIf="signinForm.get('username').errors?.required" class="mat-error">هذا الحقل مطلوب</mat-error> 
+                   </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput type="password" placeholder="كلمة المرور" name="password"
+            formControlName="password" /> 
+           
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column" class="mt20 mb20">
+        <mat-checkbox color="primary" [ngStyle.xs]="{'margin-bottom.px': 10}">تذكر بياناتي</mat-checkbox>
+        <!-- <a href="javascript:void(0)">نسيت كلمة المرور</a> -->
+      </div>
+      <div fxLayout="row">
+        <div fxFlexFill>
+          <button type="submit" mat-raised-button color="primary" class="w-100">تسجيل الدخول</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

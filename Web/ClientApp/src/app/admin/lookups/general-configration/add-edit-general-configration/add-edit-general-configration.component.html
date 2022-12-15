@@ -1,0 +1,95 @@
+<div mat-dialog-title>
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- <h3 class="dialog-title"> إضافة مدينة</h3> -->
+    <button mat-button mat-dialog-close><span class="material-icons"> clear </span></button>
+  </div>
+</div>
+<div mat-dialog-content>
+  <form (ngSubmit)="doSubmit()" [formGroup]="settingForm" class="w-100">
+    <!-- <div class="form-row">
+
+      
+      <div class="col-12"  *ngIf="action=='Edit'">
+        <br>
+        <b>Setting Name :</b> {{'  '+settingForm.controls['name'].value }}
+    </div>
+    
+    <div *ngIf="action!='Edit'">
+        <mat-form-field class="col-12">
+            <input matInput type="text" placeholder="Name" formControlName="name" id="name">
+            <mat-hint align="end">Not more then 100 characters long.</mat-hint>
+            <mat-error *ngIf="hasError('name', 'required')">name is required</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="col-12"  *ngIf="action=='Edit'">
+        <br>
+
+        <b>Setting Type :{{'  '}}</b>
+        <span *ngIf="settingForm.controls['valueType'].value==1">Boolean</span>
+        <span *ngIf="settingForm.controls['valueType'].value==2">Integer</span>
+        <span *ngIf="settingForm.controls['valueType'].value==3">Fraction</span>
+        <span *ngIf="settingForm.controls['valueType'].value==4">Text</span>
+        <br>
+        <br>
+
+    </div>
+    
+    <div class="col-12" *ngIf="action!='Edit'">
+        <mat-form-field appearance="fill">
+            <mat-label>Filed Type</mat-label>
+            <mat-select (selectionChange)="ChangeValue()" formControlName="valueType">
+                <mat-option [value]="1">Boolean</mat-option>
+                <mat-option [value]="2">Integer</mat-option>
+                <mat-option [value]="3">Fraction</mat-option>
+                <mat-option [value]="4">Text</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <ng-container *ngIf="settingForm.controls['valueType'].value==1;else second">
+        <div class="col-12">
+            <mat-checkbox matInput placeholder="value" formControlName="value" id="value">Is active
+            </mat-checkbox>
+        </div>
+
+    </ng-container>
+    <ng-template #second>
+        <ng-container *ngIf="settingForm.controls['valueType'].value==2;else third">
+            <mat-form-field class="col-12">
+                <input matInput type="number"  min="0" step="1" placeholder="Item value" formControlName="value" id="value">
+                <mat-error *ngIf="hasError('value', 'required')">Item value is required</mat-error>
+            </mat-form-field>
+        </ng-container>
+    </ng-template>
+    <ng-template #third>
+        <ng-container *ngIf="settingForm.controls['valueType'].value==3;else fourth">
+            <mat-form-field class="col-12">
+                <input matInput type="number" min="0" step=".01" placeholder="Item value" formControlName="value"
+                    id="value">
+                <mat-error *ngIf="hasError('value', 'required')">Item value is required</mat-error>
+            </mat-form-field>
+
+        </ng-container>
+    </ng-template>
+    <ng-template #fourth>
+        <ng-container *ngIf="settingForm.controls['valueType'].value==4;">
+            <mat-form-field class="col-12">
+                <input matInput type="text" placeholder="Item value" formControlName="value" id="value">
+                <mat-error *ngIf="hasError('value', 'required')">Item value is required</mat-error>
+            </mat-form-field>
+        </ng-container>
+    </ng-template>
+ 
+
+
+    </div> -->
+    <hr />
+    <div class="text-center form-actions">
+      <button mat-raised-button color="primary">إضافة</button>
+      <button mat-raised-button mat-dialog-close>إلغاء</button>
+    </div>
+  </form>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->

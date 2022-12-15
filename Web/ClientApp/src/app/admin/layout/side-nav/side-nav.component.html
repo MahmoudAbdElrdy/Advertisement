@@ -1,0 +1,141 @@
+<mat-nav-list>
+  <!-- <a *ngFor="let item of routes" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/', item.path]">
+    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
+    {{ item.data.text }}
+  </a> -->
+  <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
+    <mat-icon class="sidenav-icon">bar_chart</mat-icon>لوحة الإحصائيات
+  </a>
+   <!-- =========================================================================================== -->
+ 
+  <!-- =========================================================================================== -->
+  <div class="nested-menu">
+    <a mat-list-item (click)="showLockupsMenu1 = !showLockupsMenu1">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>
+      الاعدادات
+      <span class="material-icons arrow" [class.rotated]="showLockupsMenu1">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showLockupsMenu1">
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-Countries" routerLinkActive="active">
+          <span>الدول</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-cities" routerLinkActive="active">
+          <span>المدن</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-GeneralConfigrations" routerLinkActive="active">
+          <span>الموقع</span>
+        </a>
+      </li>
+ 
+     
+    </ul>
+   
+  </div>
+  <!-- =========================================================================================== -->
+  <div class="nested-menu">
+    <a mat-list-item (click)="showLockupsMenu2 = !showLockupsMenu2">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>
+      الشكاوي 
+      <span class="material-icons arrow" [class.rotated]="showLockupsMenu2">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showLockupsMenu2">
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-complaints" routerLinkActive="active">
+          <span>شكاوي البلاغات</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-orderComplaints" routerLinkActive="active">
+          <span>شكاوي الاعلانات</span>
+        </a>
+      </li>
+    </ul>
+   
+  </div>
+  <!-- =========================================================================================== -->
+  <div class="nested-menu">
+    <a mat-list-item (click)="showLockupsMenu3= !showLockupsMenu3">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>
+      الخدمات  
+      <span class="material-icons arrow" [class.rotated]="showLockupsMenu3">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showLockupsMenu3">
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/List-servicetype" routerLinkActive="active">
+          <span>الخدمات</span>
+        </a>
+      </li>
+    </ul>
+   
+  </div>
+  <!-- =========================================================================================== -->
+  <div class="nested-menu">
+    <a mat-list-item (click)="showLockupsMenu4= !showLockupsMenu4">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>
+      الاعلانات  
+      <span class="material-icons arrow" [class.rotated]="showLockupsMenu4">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showLockupsMenu4">
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/list-Advertisements" routerLinkActive="active">
+          <span>الاعلانات</span>
+        </a>
+      </li>
+    </ul>
+   
+  </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="showLockupsMenu5= !showLockupsMenu5">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>
+      التواصل  
+      <span class="material-icons arrow" [class.rotated]="showLockupsMenu5">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showLockupsMenu5">
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/List-ContactUs" routerLinkActive="active">
+          <span>تواصل معنا</span>
+        </a>
+      </li>
+    </ul>
+   
+  </div>
+  <!-- =========================================================================================== -->
+  <div class="nested-menu">
+    <a mat-list-item (click)="showUsersMenu = !showUsersMenu">
+      <mat-icon class="sidenav-icon">people</mat-icon>
+      إدارة المستخدمين
+      <span class="material-icons arrow" [class.rotated]="showUsersMenu">
+        chevron_left
+        </span>
+    </a>
+    <ul class="nested submenu" [class.expand]="showUsersMenu">
+      <li>
+        
+        <a href="javascript:void(0)" routerLink="/lookups/list-Users" routerLinkActive="active">
+          <span>المستخدمين</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" routerLink="/lookups/List-Roles" routerLinkActive="active">
+          <span>الصلاحيات </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- =========================================================================================== -->
+</mat-nav-list>

@@ -1,0 +1,46 @@
+<div mat-dialog-title>
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="dialog-title"> الرد</h3>
+      <button mat-button  mat-dialog-close><span class="material-icons"> clear </span></button>
+    </div>
+  </div>
+  <div mat-dialog-content>
+   
+    <form (ngSubmit)="doSubmit()" [formGroup]="ContactForm">
+        <!-- <mat-form-field   class="w-50">
+            <input matInput placeholder="الاسم" formControlName="name" />
+           
+        </mat-form-field>
+
+        <mat-form-field  class="w-50">
+            <input matInput placeholder="الميل" formControlName="email" />
+           
+        </mat-form-field>
+
+        <mat-form-field  class="w-50">
+            <input matInput placeholder="الموضوع" formControlName="title" />
+           
+        </mat-form-field>
+
+        <mat-form-field  class="w-50">
+            <textarea matInput formControlName="content"  placeholder="محتوي الرسالة"></textarea>
+            
+        </mat-form-field> -->
+     
+        <div class="section-form-field">
+            <span class="ui-float-label section-clear-input field-textarea design-float-input">
+<label style="margin-left: 400px;">المحتوي</label>    <textarea class="float-input floatInput2 w-100 d-block" disabled="disabled" autoResize="" rows="6" #contents pInputTextarea
+    name="notes"formControlName="content"></textarea>
+    <label style="margin-left:430px;">الرد</label> 
+    <textarea class="float-input floatInput2 w-100 d-block"  autoResize="" rows="6"  pInputTextarea
+    name="responesAdmin" formControlName="responesAdmin"></textarea>
+
+</span>
+
+        </div>
+        <div class="text-center form-actions">
+            <button mat-raised-button color="primary">ارسال</button>
+            <button mat-raised-button mat-dialog-close>إلغاء</button>
+          </div>
+    </form>
+  </div>

@@ -1,0 +1,47 @@
+@import '~src/scss/variables';
+.mat-nav-list {
+  width: 100%;
+  a {
+      .mat-icon {
+          margin-left: 15px;
+          color: $primary-color;
+      }
+      display: block;
+  }
+  a.active{
+      color: #1976d2;
+  }
+}
+.nested-menu {
+    .arrow{
+        position: absolute;
+        left: 0;
+        &.rotated{
+            transform: rotate(-90deg);
+        }
+    }
+  .nested {
+      list-style-type: none;
+  }
+  .submenu {
+      display: none;
+      height: 0;
+  }
+  & .expand {
+      &.submenu {
+          display: block;
+          list-style-type: none;
+          height: auto;
+          margin: 0;
+          li {
+              a {
+                  padding: 10px;
+                  display: block;
+                &.active{
+                    color:#d42360;
+                }
+              }
+          }
+      }
+  }
+}

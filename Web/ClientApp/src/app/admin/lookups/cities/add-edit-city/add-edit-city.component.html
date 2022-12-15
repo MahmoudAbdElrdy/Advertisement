@@ -1,0 +1,54 @@
+<div mat-dialog-title>
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="dialog-title"> إضافة مدينة</h3>
+    <button mat-button  mat-dialog-close><span class="material-icons"> clear </span></button>
+  </div>
+</div>
+<div mat-dialog-content>
+  <form (ngSubmit)="doSubmit()" [formGroup]="cityForm" class="w-100">
+    <div class="form-group col-md-6">
+      <mat-label> اسم الدولة (عربي)</mat-label>
+      <mat-form-field class="w-100 mb-2" appearance="fill">
+        <mat-error *ngIf="fc.countryId.errors?.required" class="mat-error">هذا الحقل مطلوب</mat-error>
+        <mat-select formControlName="countryId" name="countryId">
+          <mat-option *ngFor="let Country of CountryDDL" [value]="Country.id">
+            {{Country.name?.ar}}
+          </mat-option>
+        
+        </mat-select>
+        
+      </mat-form-field>
+    </div>
+    <div formGroupName="name">
+      <div   class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> اسم المدينة (عربي)</mat-label>
+          <input placeholder="ادخل اسم المدينة (عربي)" matInput name="ar"
+            formControlName="ar" /> 
+           
+            <mat-error *ngIf="cityForm.get('name.ar').errors?.required" class="mat-error">هذا الحقل مطلوب</mat-error> 
+            <mat-error *ngIf="cityForm.get('name.ar').errors?.pattern" class="mat-error">ادخل الحقل بحروف عربي</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group col-md-6">
+        <mat-form-field class="w-100 mb-2" appearance="fill">
+          <mat-label> اسم المدينة (إنجليزي)</mat-label>
+          <input placeholder="ادخل اسم المدينة (إنجليزي)" matInput name="en"
+            formControlName="en" />  
+            <mat-error *ngIf="cityForm.get('name.en').errors?.required" class="mat-error">هذا الحقل مطلوب</mat-error>
+            <mat-error *ngIf="cityForm.get('name.en').errors?.pattern" class="mat-error">ادخل الحقل بحروف إنجليزي</mat-error>  
+        </mat-form-field>
+      </div>
+    </div>
+      
+  
+    <hr/>
+      <div class="text-center form-actions">
+        <button mat-raised-button color="primary">إضافة</button>
+        <button mat-raised-button mat-dialog-close>إلغاء</button>
+      </div>
+  </form>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->

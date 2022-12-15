@@ -1,0 +1,28 @@
+<div mat-dialog-title>
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="dialog-title"> إضافة </h3>
+      <button mat-button  mat-dialog-close><span class="material-icons"> clear </span></button>
+    </div>
+  </div>
+  <div mat-dialog-content>
+    <form (ngSubmit)="doSubmit()" [formGroup]="roleForm" class="w-100">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <mat-form-field class="w-100 mb-2" appearance="fill">
+            <mat-label> اسم الصلاحية</mat-label>
+            <input placeholder="ادخل اسم الصلاحية" matInput name="name"
+              formControlName="name" />  
+              <mat-error *ngIf="fc.name.errors?.required" class="mat-error">هذا الحقل مطلوب</mat-error> 
+              <mat-error *ngIf="fc.name.errors?.pattern" class="mat-error">ادخل الحقل بحروف عربي</mat-error>
+          </mat-form-field>
+        </div>
+     
+      </div>
+      <hr/>
+        <div class="text-center form-actions">
+          <button mat-raised-button color="primary">إضافة</button>
+          <button mat-raised-button mat-dialog-close>إلغاء</button>
+        </div>
+    </form>
+  </div>
+ 
